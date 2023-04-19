@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/02/14 22:09:05.000.037,=C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/02 22:09:27.000.030,=C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/11 21:23:49.000.197,=C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/11 21:25:05.000.903,F:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Generic.dfm=C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/04/11 21:25:05.000.903,F:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Generic.pas=C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/11 21:25:21.000.209,=C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/11 21:25:43.000.188,F:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Generic.Classe.First.pas=C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/11 21:25:55.000.955,F:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Generics.dproj=C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/04/11 21:43:55.000.907,F:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Generic.Classe.Pessoa.pas=F:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Generic.Classe.First.pas</Transaction>
+    <Transaction>2023/04/11 21:44:12.000.129,=F:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Unit1.pas</Transaction>
+    <Transaction>2023/04/11 21:44:36.000.405,F:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Generic.Classe.Empresa.pas=F:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Unit1.pas</Transaction>
+    <Transaction>2023/04/11 21:54:58.000.138,=F:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Unit1.pas</Transaction>
+    <Transaction>2023/04/11 21:55:19.000.234,F:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Generic.Classe.PessoaParams.pas=F:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Unit1.pas</Transaction>
+    <Transaction>2023/04/18 18:38:52.352,=E:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Unit1.pas</Transaction>
+    <Transaction>2023/04/18 18:39:23.597,E:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Generic.Classe.Interfaces.pas=E:\Estudos\Delphi Senior\Recurso da linguagem\Generics\Unit1.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Generic.Classe.Pessoa.pas"/>
+    <File Path="Generic.pas"/>
+    <File Path="Generic.dfm"/>
+    <File Path="Generic.Classe.Empresa.pas"/>
+    <File Path="Generic.Classe.PessoaParams.pas"/>
+    <File Path="Generic.Classe.Interfaces.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>

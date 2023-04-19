@@ -1,0 +1,17 @@
+program CalculaQuadrado;
+var
+  numero: integer;
+  quadrado: integer;
+begin
+  writeln('');
+  writeln('       Calculo dos quadrados de uma sequencia de numeros');
+  writeln('');
+  write('Entre com uma sequencia de numeros inteiros nao-nulos, seguida por 0: ');
+  read(numero);
+  while (numero <> 0) do
+  begin
+    quadrado:= numero * numero;
+    writeln('O quadrado do numero ', numero, ': ',quadrado);
+    read(numero)
+  end
+end.

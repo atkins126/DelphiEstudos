@@ -1,0 +1,59 @@
+unit Exercicio04;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TFormExercicio04 = class(TForm)
+    Button1: TButton;
+    Memo1: TMemo;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+    VetorM: Array [0..2] of Integer;
+    VetorN: Array [0..1] of Integer;
+    VetorR: Array [0..3] of Integer;
+  public
+    { Public declarations }
+
+  end;
+
+var
+  FormExercicio04: TFormExercicio04;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormExercicio04.Button1Click(Sender: TObject);
+var
+  I, K: Integer;
+begin
+  VetorM[0]:= 1;
+  VetorM[1]:= 2;
+  VetorM[2]:= 3;
+  VetorN[0]:= 2;
+  VetorN[1]:= 4;
+  K:= 0;
+  for I := 0 to 2 do
+  begin
+    if VetorM[I] <> VetorR[K] then
+      VetorR[K]:= VetorM[I];
+    if Length(VetorN) <= K then
+      if VetorN[K] <> VetorR[K + 1] then
+        VetorR[K + 1]:= VetorN[K];
+    Memo1.Lines.Add(VetorR[K].ToString);
+    Inc(K);
+  end;
+  K:= 0;
+  for I := 0 to 1 do
+  begin
+    if VetorM[I] <> VetorR[K] then
+      VetorR[K]:= VetorM[I];
+  end;
+end;
+
+end.

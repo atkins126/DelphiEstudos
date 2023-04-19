@@ -1,0 +1,100 @@
+program exercicio4;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+{
+Dados dois números naturais m e n e duas seqüências ordenadas com m e n números
+inteiros, obter uma única seqüência ordenada contendo todos os elementos das
+seqüências originais sem repetição. Sugestão: Imagine uma situação real, por exemplo,
+dois fichários de uma biblioteca.
+
+
+Implementar a função que:
+1 - combine os vetores ordenados
+  Implementar os procedimentos que:
+  1 - insere dados em vetor
+  2 - ordena um vetor, e
+  3 - imprime o centeúdo de um vetor
+}
+
+const
+  tamMax = 100;
+  numMaxIntercala=200;
+
+type
+  indices = 1..tamMax;
+  indInt = 1..numMaxIntercala;
+  sequencia = array[indices] of integer;
+  intercala = array[indInt] of integer;
+
+var
+  m, n, i, j, k : integer;
+  a, b : sequencia;
+  c : intercala;
+begin
+ write('digite o valor de m:');
+ readLn(m);
+
+ for i:=1 to m do
+  read(a[i]);
+
+ readLn;
+
+ write('digite o valor de n:');
+ readLn(n);
+
+ for i:=1 to n do
+  read(b[i]);
+
+ readLn;
+
+ i:=1;
+ j:=1;
+ k:=0;
+
+ while (i<=m) and (j<=n) do
+   if a[i]<b[j] then
+   begin
+     k:=k+1;
+     c[k]:=a[i];
+     i:=i+1
+   end
+   else
+   if a[i]>b[j] then
+   begin
+     k:=k+1;
+     c[k]:=b[j];
+     j:=j+1
+   end
+   else
+   begin
+     k:=k+1;
+     c[k]:=a[i];
+     i:=i+1;
+     j:=j+1
+   end;
+
+ while i<=m do
+ begin
+   k:=k+1;
+   c[k]:=a[i];
+   i:=i+1
+ end;
+
+ while j<=n do
+ begin
+   k:=k+1;
+   c[k]:=b[j];
+   j:=j+1
+ end;
+
+ for i:=1 to k do
+  write(c[i],' ');
+
+  writeLn;
+  sleep(10000);
+end.

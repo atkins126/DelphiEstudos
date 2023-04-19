@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/04/05 18:37:28.000.172,=C:\Users\Eric Dev\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/05 18:38:21.000.008,C:\Users\Eric Dev\Documents\Embarcadero\Studio\Projects\Unit1.pas=E:\Estudos\Delphi Iniciantes\Delphi Senior\Recurso da linguagem\Class Operators\Class_Operators.pas</Transaction>
+    <Transaction>2023/04/05 18:38:21.000.008,C:\Users\Eric Dev\Documents\Embarcadero\Studio\Projects\Unit1.dfm=E:\Estudos\Delphi Iniciantes\Delphi Senior\Recurso da linguagem\Class Operators\Class_Operators.dfm</Transaction>
+    <Transaction>2023/04/05 18:38:37.000.174,C:\Users\Eric Dev\Documents\Embarcadero\Studio\Projects\Project1.dproj=E:\Estudos\Delphi Iniciantes\Delphi Senior\Recurso da linguagem\Class Operators\PClassOperators.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

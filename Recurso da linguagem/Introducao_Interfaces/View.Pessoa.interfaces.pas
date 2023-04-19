@@ -1,0 +1,15 @@
+unit View.Pessoa.interfaces;
+
+interface
+type
+  iPessoa = interface
+
+  //CRTL + Shift + g (Gera essa chave)
+    ['{C4B49315-0EA8-4004-809C-7FE80489B6DD}']
+    function ValidarNome : Boolean;
+    function Nome ( aValue : String) : iPessoa;
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,42 @@
+program exercicio3;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+{
+ Dado um número inteiro positivo, determine a sua decomposição em fatores primos
+ calculando também a multiplicidade de cada fator.
+
+
+}
+var
+  n {numero dado},
+  nat {candidato a fator do numero dado},
+  multi {multiplocidade do fator}: Integer;
+begin
+  writeln('Decomponho um numero dado em fatores primos.');
+  writeln('');
+  write('Entre com o numero (>1) a ser decomposto:');
+  read(n);
+  writeln('Decomposicao de '+IntToStr(n)+' em fatores primos');
+
+  nat:=2;
+  while n>1 do
+  begin
+    multi:=0;
+    while n mod nat =0 do
+    begin
+      multi:=multi+1;
+      n := n div nat;
+    end;
+    if multi<>0 then begin
+      writeln(' fator ',nat,' multiplicidade ', multi);
+    end;
+    nat:=nat+1
+  end;
+  sleep(3000);
+end.

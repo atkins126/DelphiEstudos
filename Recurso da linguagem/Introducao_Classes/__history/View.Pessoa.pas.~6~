@@ -1,0 +1,47 @@
+unit View.Pessoa;
+
+interface
+
+type
+    TPessoa = class
+
+          private
+            { private declarations }
+            FSobrenome : String;
+            FNome : String;
+
+          public
+            function Nome (aValue : String ): TPessoa; overload;
+            function Nome : String; overload;
+            function Sobrenome (aValue : String ) : TPessoa; overload;
+            Function Sobrenome : String; overload;
+          end;
+
+implementation
+
+{ TPessoa }
+
+function TPessoa.Nome(aValue: String): TPessoa;
+begin
+  Result := Self;
+  FNome := aValue;
+end;
+
+function TPessoa.Sobrenome(aValue: String): TPessoa;
+begin
+  Result := Self;
+  FSobrenome := aValue;
+
+end;
+
+function TPessoa.Nome: String;
+begin
+  Result := FNome;
+end;
+
+function TPessoa.Sobrenome: String;
+begin
+  Result := FSobrenome;
+end;
+
+end.

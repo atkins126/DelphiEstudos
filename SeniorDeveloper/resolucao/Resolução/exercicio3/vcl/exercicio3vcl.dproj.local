@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/05/20 13:24:33.000.766,=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2021/05/20 13:24:49.000.344,C:\ProjetosExemplo\exercicios de logica\Resolução\exercicio3\vcl\Unit3.pas=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2021/05/20 13:24:49.000.344,C:\ProjetosExemplo\exercicios de logica\Resolução\exercicio3\vcl\Unit3.dfm=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>2021/05/20 13:24:50.000.169,C:\ProjetosExemplo\exercicios de logica\Resolução\exercicio3\vcl\Project1.dproj=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/05/20 13:25:00.000.637,C:\ProjetosExemplo\exercicios de logica\Resolução\exercicio3\vcl\exercicio3vcl.dproj=C:\ProjetosExemplo\exercicios de logica\Resolução\exercicio3\vcl\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

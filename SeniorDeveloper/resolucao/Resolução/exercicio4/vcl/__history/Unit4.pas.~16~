@@ -1,0 +1,124 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+
+
+  TForm4 = class(TForm)
+    Label1: TLabel;
+    Edit1: TEdit;
+    Button1: TButton;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    procedure Button1Click(Sender: TObject);
+  private
+    const
+      tamMax = 100;
+      numMaxIntercala=200;
+
+    type
+      indices = 1..tamMax;
+      indInt = 1..numMaxIntercala;
+      sequencia = array[indices] of integer;
+      intercala = array[indInt] of integer;
+  public
+    FIntercala : intercala;
+    function RetSequencia(Value : integer; vLista : String) : sequencia;
+  end;
+
+var
+  Form4: TForm4;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm4.Button1Click(Sender: TObject);
+var
+  m, n, i, v1, v2, cont, j, k : Integer;
+  a, b : sequencia;
+  c : Intercala;
+begin
+  m := StrToInt(Edit1.Text);
+  n := StrToInt(Edit2.Text);
+
+  a := RetSequencia(m,Edit3.Text);
+  b := RetSequencia(n,Edit4.Text);
+
+  i:=1;
+  j:=1;
+  k:=0;
+
+  while (i<=m) and (j<=n) do
+   if a[i]<b[j] then
+   begin
+     k:=k+1;
+     c[k]:=a[i];
+     i:=i+1
+   end
+   else
+   if a[i]>b[j] then
+   begin
+     k:=k+1;
+     c[k]:=b[j];
+     j:=j+1
+   end
+   else
+   begin
+     k:=k+1;
+     c[k]:=a[i];
+     i:=i+1;
+     j:=j+1
+   end;
+
+  while i<=m do
+  begin
+   k:=k+1;
+   c[k]:=a[i];
+   i:=i+1
+  end;
+
+  while j<=n do
+  begin
+   k:=k+1;
+   c[k]:=b[j];
+   j:=j+1
+  end;
+
+  for i:=1 to k do
+    Memo1.Lines.Add(IntToStr(c[i]));
+end;
+
+function TForm4.RetSequencia(Value : integer; vLista : String) : sequencia;
+var
+  I,J: Integer;
+  lList : TStringList;
+begin
+  lList := TStringList.Create;
+  try
+    lList.Delimiter := ',';
+    lList.StrictDelimiter := true;
+    lList.DelimitedText := vLista;
+
+    J := 1;
+    for I := 0 to lList.Count-1 do
+    begin
+      if J<=value then
+        Result[J] := StrToInt(lList.Strings[I]);
+
+      inc(J);
+    end;
+
+  finally
+    lList.Free;
+  end;
+end;
+
+end.

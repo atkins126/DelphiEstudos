@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/02/14 22:09:05.000.037,=C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/03/29 22:02:14.000.763,=C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/03/29 22:03:03.000.395,C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.dfm=I:\Estudos\Delphi Iniciantes\Delphi Senior\Recurso da linguagem\Introducao_Classes\UPrincialClasses.dfm</Transaction>
+    <Transaction>2023/03/29 22:03:03.000.395,C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.pas=I:\Estudos\Delphi Iniciantes\Delphi Senior\Recurso da linguagem\Introducao_Classes\UPrincialClasses.pas</Transaction>
+    <Transaction>2023/03/29 22:03:13.000.384,=C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/03/29 22:03:32.000.552,C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.pas=I:\Estudos\Delphi Iniciantes\Delphi Senior\Recurso da linguagem\Introducao_Classes\View.Pessoa.pas</Transaction>
+    <Transaction>2023/03/29 22:12:12.000.534,=C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/03/29 22:12:53.000.761,C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Unit1.pas=I:\Estudos\Delphi Iniciantes\Delphi Senior\Recurso da linguagem\Introducao_Classes\View.Pessoas.pas</Transaction>
+    <Transaction>2023/03/29 22:17:23.000.937,I:\Estudos\Delphi Iniciantes\Delphi Senior\Recurso da linguagem\Introducao_Classes\View.Pessoas.pas=</Transaction>
+    <Transaction>2023/03/29 22:28:37.000.218,C:\Users\EricGaldinoDev\Documents\Embarcadero\Studio\Projects\Project1.dproj=I:\Estudos\Delphi Iniciantes\Delphi Senior\Recurso da linguagem\Introducao_Classes\IntroClasses.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,16 @@
+unit View.PessoaJuridica;
+
+interface
+
+uses
+  View.Pessoa.interfaces;
+  type
+    TPessoaJuridica = Class(TInterfacedObject, iPessoa)
+      private
+      public
+
+    End;
+
+implementation
+
+end.

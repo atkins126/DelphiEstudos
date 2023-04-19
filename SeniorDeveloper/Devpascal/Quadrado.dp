@@ -1,0 +1,12 @@
+[Project]
+FileName=E:\Projetos\SeniorDeveloper\Devpascal\Quadrado.dp
+Name=Quadrado
+MainUnit=E:\Projetos\SeniorDeveloper\Devpascal\Quadrado1.pas
+UnitCount=1
+ResFiles=E:\Projetos\SeniorDeveloper\Devpascal\rsrc.rc
+NoConsole=1
+IsDll=0
+Icon=C:\Dev-Pas\bin\Mainicon.ico
+[Unit1]
+FileName=E:\Projetos\SeniorDeveloper\Devpascal\Quadrado1.pas
+FileTime=1387349213

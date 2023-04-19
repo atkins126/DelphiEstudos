@@ -1,0 +1,73 @@
+unit Model.Services.CEP.APICEP;
+
+interface
+
+uses
+  Model.Services.Interfaces;
+
+type
+  TModelServicesCEPAPICEP = class(TInterfacedObject, iModelServicesCEP)
+    private
+      [weak]
+      FParent : iModelServicesCEP;
+      FReturn : String;
+      FCode : String;
+    public
+      constructor Create(aParent : iModelServicesCEP);
+      destructor Destroy; override;
+      class function New(aParent : iModelServicesCEP) : iModelServicesCEP;
+      function Code ( aValue : String ) : iModelServicesCEP;
+      function Execute : iModelServicesCEP;
+      function Return : String;
+  end;
+
+implementation
+
+uses
+  Model.Connections.RestRequest;
+
+{ TModelServicesCEPAPICEP }
+
+function TModelServicesCEPAPICEP.Code(aValue: String): iModelServicesCEP;
+begin
+  Result := Self;
+  FCode := aValue;
+end;
+
+constructor TModelServicesCEPAPICEP.Create(aParent : iModelServicesCEP);
+begin
+  FParent := aParent;
+end;
+
+destructor TModelServicesCEPAPICEP.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelServicesCEPAPICEP.Execute: iModelServicesCEP;
+begin
+  Result := Self;
+  try
+    FReturn :=
+    TModelConnectionsRestRequest
+      .New
+        .Get('https://ws.apicep.com/cep/'+ FCode +'.json')
+        .Return;
+  except
+    if Assigned(FParent) then
+      FReturn := FParent.Code(FCode).Execute.Return;
+  end;
+end;
+
+class function TModelServicesCEPAPICEP.New(aParent : iModelServicesCEP) : iModelServicesCEP;
+begin
+  Result := Self.Create(aParent);
+end;
+
+function TModelServicesCEPAPICEP.Return: String;
+begin
+  Result := FReturn;
+end;
+
+end.

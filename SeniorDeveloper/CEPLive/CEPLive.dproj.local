@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/16 13:50:46.000.996,=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/03/27 13:38:03.000.251,=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/05/11 19:35:31.000.788,=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/05/11 19:38:23.000.101,C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\thuli\Desktop\CEPLive\src\View\View.Principal.pas</Transaction>
+    <Transaction>2021/05/11 19:38:23.000.101,C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\thuli\Desktop\CEPLive\src\View\View.Principal.dfm</Transaction>
+    <Transaction>2021/05/11 19:38:31.000.090,C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\thuli\Desktop\CEPLive\CEPLive.dproj</Transaction>
+    <Transaction>2021/05/11 19:40:52.000.025,=C:\Users\thuli\Desktop\CEPLive\Unit2.pas</Transaction>
+    <Transaction>2021/05/11 19:40:57.000.469,=C:\Users\thuli\Desktop\CEPLive\Unit1.pas</Transaction>
+    <Transaction>2021/05/11 19:43:48.000.489,C:\Users\thuli\Desktop\CEPLive\Unit1.pas=C:\Users\thuli\Desktop\CEPLive\src\Model\Connections\Model.Connections.Interfaces.pas</Transaction>
+    <Transaction>2021/05/11 19:45:46.000.405,=C:\Users\thuli\Desktop\CEPLive\Unit1.pas</Transaction>
+    <Transaction>2021/05/11 19:45:57.000.802,C:\Users\thuli\Desktop\CEPLive\Unit1.pas=C:\Users\thuli\Desktop\CEPLive\src\Model\Connections\Model.Connections.RestRequest.pas</Transaction>
+    <Transaction>2021/05/11 19:57:15.000.846,=C:\Users\thuli\Desktop\CEPLive\Unit1.pas</Transaction>
+    <Transaction>2021/05/11 20:01:03.000.511,C:\Users\thuli\Desktop\CEPLive\Unit1.pas=C:\Users\thuli\Desktop\CEPLive\src\Model\Services\Model.Services.Interfaces.pas</Transaction>
+    <Transaction>2021/05/11 20:02:48.000.908,=C:\Users\thuli\Desktop\CEPLive\Unit1.pas</Transaction>
+    <Transaction>2021/05/11 20:03:23.000.660,C:\Users\thuli\Desktop\CEPLive\Unit1.pas=C:\Users\thuli\Desktop\CEPLive\src\Model\Services\CEP\Model.Services.CEP.APICEP.pas</Transaction>
+    <Transaction>2021/05/11 20:07:05.000.506,=C:\Users\thuli\Desktop\CEPLive\Unit1.pas</Transaction>
+    <Transaction>2021/05/11 20:07:17.000.962,C:\Users\thuli\Desktop\CEPLive\Unit1.pas=C:\Users\thuli\Desktop\CEPLive\src\Model\Services\CEP\Model.Services.CEP.BrasilAPI.pas</Transaction>
+    <Transaction>2021/05/11 20:08:03.000.371,=C:\Users\thuli\Desktop\CEPLive\Unit1.pas</Transaction>
+    <Transaction>2021/05/11 20:08:16.000.263,C:\Users\thuli\Desktop\CEPLive\Unit1.pas=C:\Users\thuli\Desktop\CEPLive\src\Model\Services\CEP\Model.Services.CEP.ViaCEP.pas</Transaction>
+    <Transaction>2021/05/11 20:28:15.000.181,=C:\Users\thuli\Desktop\CEPLive\Unit1.pas</Transaction>
+    <Transaction>2021/05/11 20:28:53.000.941,C:\Users\thuli\Desktop\CEPLive\src\Model\Services\CEP\Model.Services.CEP.Interfaces.pas=C:\Users\thuli\Desktop\CEPLive\Unit1.pas</Transaction>
+    <Transaction>2021/05/11 20:29:30.000.628,=C:\Users\thuli\Desktop\CEPLive\Unit1.pas</Transaction>
+    <Transaction>2021/05/11 20:29:43.000.349,C:\Users\thuli\Desktop\CEPLive\src\Model\Services\CEP\Model.Services.CEP.Builder.pas=C:\Users\thuli\Desktop\CEPLive\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

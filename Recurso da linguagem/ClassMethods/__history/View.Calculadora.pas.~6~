@@ -1,0 +1,21 @@
+﻿unit View.Calculadora;
+
+interface
+
+type
+  TCalculator = class
+    private
+    public
+      function Somar (A, B : Integer) : Integer;
+  end;
+
+implementation
+
+{ TCalculator }
+
+function TCalculator.Somar(A, B: Integer): Integer;
+begin
+  Result := A + B;
+end;
+
+end.

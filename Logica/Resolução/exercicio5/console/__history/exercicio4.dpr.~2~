@@ -1,0 +1,36 @@
+program exercicio4;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+{
+Dados dois números inteiros positivos, determinar o máximo divisor comum entre
+eles usando o algoritmo de Euclides.
+
+Algoritimo de euclides:
+Em matemática, o algoritmo de Euclides é um método simples e eficiente de
+encontrar o máximo divisor comum entre dois números inteiros diferentes de zero.
+O algoritmo de Euclides é baseado no princípio de que o MDC não muda se o menor
+número for subtraído ao maior
+
+Objetivo:
+Programa que le um dos inteiro positivos n e m e imprime o maximo divisor comum
+MDC de n e m.
+
+Exemplo de execucao:
+Digite o valor de n (n>0):15
+Digite o valor de m (m>0):24
+MDC(15,24)=23
+
+Digite o valor de n (n>0):315
+Digite o valor de m (m>0):124
+MDC(15,24)=23
+}
+
+begin
+
+end.

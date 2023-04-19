@@ -1,0 +1,62 @@
+unit Model.Connections.RestRequest;
+
+interface
+
+uses
+  Model.Connections.Interfaces,
+  RESTRequest4D;
+
+type
+  TModelConnectionsRestRequest = class(TInterfacedObject, iModelConnectionsInterface)
+    private
+      FReturn : String;
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iModelConnectionsInterface;
+      function Get ( aValue : String ) : iModelConnectionsInterface;
+      function Return : String;
+  end;
+
+implementation
+
+{ TModelConnectionsRestRequest }
+
+constructor TModelConnectionsRestRequest.Create;
+begin
+
+end;
+
+destructor TModelConnectionsRestRequest.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelConnectionsRestRequest.Get(
+  aValue: String): iModelConnectionsInterface;
+var
+  LResponse: IResponse;
+begin
+  Result := Self;
+  LResponse :=
+    TRequest.New
+      .BaseURL(aValue)
+      .Accept('application/json')
+    .Get;
+  if LResponse.StatusCode = 200 then
+    FReturn := LResponse.Content;
+end;
+end;
+
+class function TModelConnectionsRestRequest.New: iModelConnectionsInterface;
+begin
+  Result := Self.Create;
+end;
+
+function TModelConnectionsRestRequest.Return: String;
+begin
+  Result := FReturn;
+end;
+
+end.

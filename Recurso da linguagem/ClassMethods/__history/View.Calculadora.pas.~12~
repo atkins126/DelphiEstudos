@@ -1,0 +1,24 @@
+unit View.Calculadora;
+
+interface
+
+uses
+  View.Calculadora.Soma;
+
+type
+  TCalculadora = class
+    private
+    public
+     class function Somar : iCalculadoraOperacoes;
+  end;
+
+implementation
+
+{ TCalculator }
+
+class function TCalculadora.Somar : TCalculadoraSomas;
+begin
+  Result := TCalculadoraSomas.New;
+end;
+
+end.

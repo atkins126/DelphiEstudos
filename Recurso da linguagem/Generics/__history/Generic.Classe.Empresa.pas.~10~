@@ -1,0 +1,63 @@
+unit Generic.Classe.Empresa;
+
+interface
+
+uses
+  Generic.Classe.PessoaParams;
+type
+  TEmpresa = class
+    private
+      FRazaoSocial : String;
+      FParam : TPessoaParams<TEmpresa>;
+    public
+      constructor Create;
+      destructor Destroy; override;
+      function RazaoSocial(aValue : String) : TEmpresa;
+      function Params : TPessoaParams<TEmpresa>;
+      function GetCadastro : String;
+    end;
+
+implementation
+
+uses
+  System.SysUtils;
+
+{ TEmpresa }
+
+constructor TEmpresa.Create;
+begin
+  FParam := TPessoaParams<TEmpresa>.Create(Self);
+end;
+
+destructor TEmpresa.Destroy;
+begin
+  FParam.Free;
+  inherited;
+end;
+
+function TEmpresa.GetCadastro: String;
+begin
+ Result :=
+    FRazaoSocial + ' - ' +
+    FParam.Telefone + ' - ' +
+    FParam.Endereco + ' - ' +
+    FParam.Cep + ' - ' +
+    FParam.PlanoSaude + ' - ' +
+    IntToStr(FParam.Numero);
+
+    if Assigned(FParam.Display)  then
+    FParam.Display() (Result)
+end;
+
+function TEmpresa.Params: TPessoaParams<TEmpresa>;
+begin
+  Result := FParam;
+end;
+
+function TEmpresa.RazaoSocial(aValue: String): TEmpresa;
+begin
+  Result := Self;
+  FRazaoSocial := aValue;
+end;
+
+end.

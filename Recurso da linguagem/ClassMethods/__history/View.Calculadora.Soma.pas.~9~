@@ -1,0 +1,42 @@
+unit View.Calculadora.Soma;
+
+interface
+
+uses
+  View.Calculadora.Intefaces;
+  type
+    TCalculadoraSomas = class(TInterfacedObject, iCalculadoraOperacoes)
+      private
+      public
+        constructor Create;
+        destructor Destroy; override;
+        class function New : iCalculadoraOperacoes;
+        function Calcular (A, B : Double): Double;
+      end;
+
+implementation
+
+{ TCalculadoraSomas }
+
+function TCalculadoraSomas.Calcular(A, B: Double): Double;
+begin
+  Result := A + B;
+end;
+
+constructor TCalculadoraSomas.Create;
+begin
+
+end;
+
+destructor TCalculadoraSomas.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TCalculadoraSomas.New: iCalculadoraOperacoes;
+begin
+  Result := Self.Create;
+end;
+
+end.

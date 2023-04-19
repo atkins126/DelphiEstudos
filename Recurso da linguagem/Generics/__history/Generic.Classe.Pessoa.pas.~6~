@@ -1,0 +1,60 @@
+unit Generic.Classe.Pessoa;
+
+interface
+
+uses
+  Generic.Classe.PessoaParams;
+  type
+    TPessoa = class
+      private
+        FNome : String;
+        FParam : TPessoaParams;
+      public
+        constructor Create;
+        destructor Destroy; override;
+        function Nome (aValue : String): TPessoa;
+        function Params : TPessoaParams;
+        function GetCadastro : String;
+      end;
+
+implementation
+
+uses
+  System.SysUtils;
+
+{ TPessoa }
+
+constructor TPessoa.Create;
+begin
+  FParam := TPessoaParams.Create;
+end;
+
+destructor TPessoa.Destroy;
+begin
+  FParam.Free;
+  inherited;
+end;
+
+function TPessoa.GetCadastro: String;
+begin
+  Result :=
+    FNome + ' - ' +
+    FParam.Telefone + ' - ' +
+    FParam.Endereco + ' - ' +
+    FParam.Cep + ' - ' +
+    FParam.PlanoSaude + ' - ' +
+    IntToStr(FParam.Numero);
+
+end;
+
+function TPessoa.Nome(aValue: String): TPessoa;
+begin
+  Result := Self;
+  FNome := aValue;
+end;
+function TPessoa.Params: TPessoaParams;
+begin
+  Result := FParam;
+end;
+
+end.

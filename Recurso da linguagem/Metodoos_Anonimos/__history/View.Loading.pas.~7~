@@ -1,0 +1,14 @@
+unit View.Loading;
+
+interface
+type
+  TLoading = class
+    private
+
+    public
+
+  end;
+
+implementation
+
+end.

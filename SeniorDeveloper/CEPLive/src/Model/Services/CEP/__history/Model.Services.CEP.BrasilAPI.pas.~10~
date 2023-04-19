@@ -1,0 +1,89 @@
+unit Model.Services.CEP.BrasilAPI;
+
+interface
+
+uses
+  Model.Services.Interfaces, System.SysUtils;
+
+type
+  TModelServicesCEPBrasilAPI = class(TInterfacedObject, iModelServicesCEP)
+    private
+      FReturn : String;
+      FCode : String;
+      [weak]
+      FParent : iModelServicesCEP;
+      FDisplay : TProc<String>;
+    public
+      constructor Create(aParent : iModelServicesCEP);
+      destructor Destroy; override;
+      class function New(aParent : iModelServicesCEP) : iModelServicesCEP;
+      function Code ( aValue : String ) : iModelServicesCEP;
+      function Execute : iModelServicesCEP;
+      function Display ( aValue : TProc<String> ) : iModelServicesCEP; overload;
+      function Display : TProc<String>; overload;
+      function Return : String;
+  end;
+
+implementation
+
+uses
+  Model.Connections.RestRequest;
+
+{ TModelServicesCEPAPICEP }
+
+function TModelServicesCEPBrasilAPI.Code(aValue: String): iModelServicesCEP;
+begin
+  Result := Self;
+  FCode := aValue;
+end;
+
+constructor TModelServicesCEPBrasilAPI.Create(aParent : iModelServicesCEP);
+begin
+  FParent := aParent;
+end;
+
+destructor TModelServicesCEPBrasilAPI.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelServicesCEPBrasilAPI.Display: TProc<String>;
+begin
+  Result := FDisplay;
+end;
+
+function TModelServicesCEPBrasilAPI.Display(
+  aValue: TProc<String>): iModelServicesCEP;
+begin
+  Result := Self;
+  FDisplay := aValue;
+end;
+
+function TModelServicesCEPBrasilAPI.Execute: iModelServicesCEP;
+begin
+  Result := Self;
+  try
+    FReturn := 'BrasilAPI - ' +
+    TModelConnectionsRestRequest
+      .New
+        .Get('https://brasilapi.com.br/api/cep/v1/'+ FCode)
+        .Return;
+  except
+    if Assigned(FParent) then
+      FReturn := FParent.Code(FCode).Execute.Return;
+  end;
+
+end;
+
+class function TModelServicesCEPBrasilAPI.New(aParent : iModelServicesCEP) : iModelServicesCEP;
+begin
+  Result := Self.Create(aParent);
+end;
+
+function TModelServicesCEPBrasilAPI.Return: String;
+begin
+  Result := FReturn;
+end;
+
+end.

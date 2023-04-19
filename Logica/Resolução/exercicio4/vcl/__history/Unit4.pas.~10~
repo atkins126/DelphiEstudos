@@ -1,0 +1,111 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+
+
+  TForm4 = class(TForm)
+    Label1: TLabel;
+    Edit1: TEdit;
+    Button1: TButton;
+    Memo1: TMemo;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    procedure Button1Click(Sender: TObject);
+  private
+    const
+      tamMax = 100;
+      numMaxIntercala=200;
+
+    type
+      indices = 1..tamMax;
+      indInt = 1..numMaxIntercala;
+      sequencia = array[indices] of integer;
+      intercala = array[indInt] of integer;
+  public
+    FSequencia1 : sequencia;
+    FSequencia2 : sequencia;
+    FIntercala : intercala;
+
+
+  end;
+
+var
+  Form4: TForm4;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm4.Button1Click(Sender: TObject);
+var
+  m, n, i, j, k : integer;
+  Seq1,Seq2:String;
+begin
+  m := StrToInt(Edit1.Text);
+  n := StrToInt(Edit2.Text);
+  Seq1 := Edit3.Text;
+  Seq2 := Edit4.Text;
+
+
+  for I := 1 to m do begin
+    if seq1[I] in ['0'..'9'] then
+      FSequencia1[I] := StrToInt(seq1[I]);
+  end;
+
+  for I := 1 to n do begin
+    if seq2[I] in ['0'..'9'] then
+      FSequencia2[I] := StrToInt(seq2[I]);
+  end;
+
+ i:=1;
+ j:=1;
+ k:=0;
+
+ while (i<=m) and (j<=n) do
+   if FSequencia1[i]<FSequencia2[j] then
+   begin
+     k:=k+1;
+     FIntercala[k]:=FSequencia1[i];
+     i:=i+1
+   end
+   else
+   if FSequencia1[i]>FSequencia2[j] then
+   begin
+     k:=k+1;
+     FIntercala[k]:=FSequencia2[j];
+     j:=j+1
+   end
+   else
+   begin
+     k:=k+1;
+     FIntercala[k]:=FSequencia1[i];
+     i:=i+1;
+     j:=j+1
+   end;
+
+ while i<=m do
+  begin
+   k:=k+1;
+   FIntercala[k]:=FSequencia1[i];
+   i:=i+1
+ end;
+
+ while j<=n do
+  begin
+   k:=k+1;
+   FIntercala[k]:=FSequencia2[j];
+   j:=j+1
+ end;
+
+ for I := 1 to k do
+   memo1.Lines.Add(IntToStr(FIntercala[I]));
+end;
+
+end.

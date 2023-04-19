@@ -1,0 +1,23 @@
+unit View.Pessoa;
+
+interface
+
+type
+    TPessoa = class
+
+          private
+            { private declarations }
+            FSobrenome : String;
+          protected
+            { protected declarations }
+          public
+            { public declarations }
+            FNome : String;
+
+          published
+            { published declarations }
+          end;
+
+implementation
+
+end.

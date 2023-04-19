@@ -1,0 +1,54 @@
+unit Generic.Classe.Pessoa;
+
+interface
+  type
+    TPessoa = class
+      private
+        FNome : String;
+        FTelefone : String;
+        FEndereco : String;
+        FCep : String;
+        FNumero : Integer;
+      public
+        function Nome (aValue : String): TPessoa;
+        function Telefone (aValue : String): TPessoa;
+        function Endereco (aValue : String): TPessoa;
+        function Cep (aValue : String): TPessoa;
+        function Numero (avalue : Integer): TPessoa;
+      end;
+
+implementation
+
+{ TPessoa }
+
+function TPessoa.Cep(aValue: String): TPessoa;
+begin
+  Result := self;
+  FCep := aValue;
+end;
+
+function TPessoa.Endereco(aValue: String): TPessoa;
+begin
+  Result := Self;
+  FEndereco := aValue;
+end;
+
+function TPessoa.Nome(aValue: String): TPessoa;
+begin
+  Result := Self;
+  FNome := aValue;
+end;
+
+function TPessoa.Numero(avalue: Integer): TPessoa;
+begin
+  Result := Self;
+  FNumero := aValue;
+end;
+
+function TPessoa.Telefone(aValue: String): TPessoa;
+begin
+  Result := Self;
+  FTelefone := aValue;
+end;
+
+end.

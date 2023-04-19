@@ -1,0 +1,15 @@
+program Generics;
+
+uses
+  Vcl.Forms,
+  Generic in 'Generic.pas' {Form1},
+  Generic.Classe.First in 'Generic.Classe.First.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

@@ -1,0 +1,45 @@
+unit Generic.Classe.Empresa;
+
+interface
+
+uses
+  Generic.Classe.PessoaParams;
+type
+  TEmpresa = class
+    private
+      FRazaoSocial : String;
+      FParam : TPessoaParams;
+    public
+      constructor Create;
+      destructor Destroy; override;
+      function RazaoSocial(aValue : String) : TEmpresa;
+      function Params : TPessoaParams;
+    end;
+
+implementation
+
+{ TEmpresa }
+
+constructor TEmpresa.Create;
+begin
+  FParam := TPessoaParams.Create;
+end;
+
+destructor TEmpresa.Destroy;
+begin
+  FParam.Free;
+  inherited;
+end;
+
+function TEmpresa.Params: TPessoaParams;
+begin
+  Result := FParam;
+end;
+
+function TEmpresa.RazaoSocial(aValue: String): TEmpresa;
+begin
+  Result := Self;
+  FRazaoSocial := aValue;
+end;
+
+end.

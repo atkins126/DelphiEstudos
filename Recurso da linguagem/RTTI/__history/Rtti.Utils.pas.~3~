@@ -1,0 +1,71 @@
+unit Rtti.Utils;
+
+interface
+
+uses
+  Vcl.Forms, System.Rtti;
+
+type
+
+  TJsonField = class(TCustomAttribute)
+    private
+    FJsonField: String;
+    FaPosition: Integer;
+    procedure SetJsonField(const Value: String);
+    procedure SetaPosition(const Value: Integer);
+    public
+      constructor Create(aJsonField : String; aPosition : Integer);
+      property JsonField : String read FJsonField write SetJsonField;
+      property aPosition :Integer read FaPosition write SetaPosition;
+  end;
+
+  TRttiUtils = class
+    private
+    public
+      class procedure FormToJson(aForm : TForm; var aResult : TJsonObject);
+
+  end;
+
+implementation
+
+{ TRttiUtils }
+
+class procedure TRttiUtils.FormToJson(aForm: TForm; var aResult: TJsonObject);
+var
+    vRttiContext : TRttiContext;
+    vRttiType : TRttiType;
+    vRttiField : TRttiField;
+
+begin
+
+   vRttiContext :=   TRttiContext.Create;
+     try
+      vRttiType := vRttiContext.GetType(aForm.ClassType);
+      for vRttiField in vRttiType.GetFields do
+        begin
+         //vRttiField.GetAttributes
+        end;
+
+     finally
+       vRttiContext.Free;
+     end;
+end;
+
+{ TJsonField }
+
+constructor TJsonField.Create(aJsonField : String; aPosition : Integer);
+begin
+  FJsonField := aJsonField;
+end;
+
+procedure TJsonField.SetaPosition(const Value: Integer);
+begin
+  FaPosition := Value;
+end;
+
+procedure TJsonField.SetJsonField(const Value: String);
+begin
+  FJsonField := Value;
+end;
+
+end.

@@ -1,0 +1,64 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+
+
+  TForm4 = class(TForm)
+    Label1: TLabel;
+    Edit1: TEdit;
+    Button1: TButton;
+    Memo1: TMemo;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    procedure Button1Click(Sender: TObject);
+  private
+    const
+      tamMax = 100;
+      numMaxIntercala=200;
+
+    type
+      indices = 1..tamMax;
+      indInt = 1..numMaxIntercala;
+      sequencia = array[indices] of integer;
+      intercala = array[indInt] of integer;
+  public
+    function RetSequencia(Value : integer; vLista : String) : sequencia;
+  end;
+
+var
+  Form4: TForm4;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm4.Button1Click(Sender: TObject);
+var
+  m, n, i, v1, v2, cont : Integer;
+  Seq1, Seq2 : sequencia;
+  lIntercala : Intercala;
+begin
+  m := StrToInt(Edit1.Text);
+  n := StrToInt(Edit2.Text);
+
+  Seq1 := RetSequencia(m,Edit3.Text);
+  Seq2 := RetSequencia(n,Edit4.Text);
+end;
+
+function TForm4.RetSequencia(Value : integer; vLista : String) : sequencia;
+var
+  I: Integer;
+begin
+  for I := 1 to Value do
+    if vLista[I] in ['0'..'9'] then
+      Result[I] := StrToInt(vLista[I]);
+end;
+
+end.

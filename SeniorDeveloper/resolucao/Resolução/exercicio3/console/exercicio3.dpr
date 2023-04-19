@@ -1,0 +1,48 @@
+program exercicio3;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+{
+ Dado um número inteiro positivo, determine a sua decomposição em fatores primos
+ calculando também a multiplicidade de cada fator.
+
+Numeros primos:
+São aqueles divisiveis apenas por 1 e por eles mesmos.
+
+Objetivo:
+Digite um valor(>1):44
+Decomposicao de 44 em fatores primos:
+   fator 2 multiplicidade de 2
+   fator 11 multiplicidade de 1
+}
+var
+  n {numero dado},
+  nat {candidato a fator do numero dado},
+  multi {multiplicidade do fator}: Integer;
+begin
+  writeln('Decomponho um numero dado em fatores primos.');
+  writeln('');
+  write('Entre com o numero (>1) a ser decomposto:');
+  read(n);
+  writeln('Decomposicao de '+IntToStr(n)+' em fatores primos:');
+
+  nat:=2;
+  while n>1 do
+  begin
+    multi:=0;
+    while n mod nat =0 do
+    begin
+      multi:=multi+1;
+      n := n div nat;
+    end;
+    if multi<>0 then
+      writeln(' fator ',nat,' multiplicidade ', multi);
+    nat:=nat+1
+  end;
+  sleep(3000);
+end.

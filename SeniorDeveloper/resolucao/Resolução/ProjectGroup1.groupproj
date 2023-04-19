@@ -1,0 +1,144 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{78128426-C60A-4481-816D-A80004B81CB1}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Exercicio1\console\Exercicio1.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Exercicio1\VCL\Exercicio1VCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="exercicio2\console\exercicio2.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="exercicio2\vcl\exercicio2VCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="exercicio3\console\exercicio3.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="exercicio3\vcl\exercicio3vcl.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="exercicio4\console\exercicio4.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="exercicio4\vcl\exercicio4vcl.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="exercicio5\vcl\exercicio5vcl.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="exercicio5\console\exercicio5.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Exercicio1">
+        <MSBuild Projects="Exercicio1\console\Exercicio1.dproj"/>
+    </Target>
+    <Target Name="Exercicio1:Clean">
+        <MSBuild Projects="Exercicio1\console\Exercicio1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Exercicio1:Make">
+        <MSBuild Projects="Exercicio1\console\Exercicio1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Exercicio1VCL">
+        <MSBuild Projects="Exercicio1\VCL\Exercicio1VCL.dproj"/>
+    </Target>
+    <Target Name="Exercicio1VCL:Clean">
+        <MSBuild Projects="Exercicio1\VCL\Exercicio1VCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Exercicio1VCL:Make">
+        <MSBuild Projects="Exercicio1\VCL\Exercicio1VCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="exercicio2">
+        <MSBuild Projects="exercicio2\console\exercicio2.dproj"/>
+    </Target>
+    <Target Name="exercicio2:Clean">
+        <MSBuild Projects="exercicio2\console\exercicio2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="exercicio2:Make">
+        <MSBuild Projects="exercicio2\console\exercicio2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="exercicio2VCL">
+        <MSBuild Projects="exercicio2\vcl\exercicio2VCL.dproj"/>
+    </Target>
+    <Target Name="exercicio2VCL:Clean">
+        <MSBuild Projects="exercicio2\vcl\exercicio2VCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="exercicio2VCL:Make">
+        <MSBuild Projects="exercicio2\vcl\exercicio2VCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="exercicio3">
+        <MSBuild Projects="exercicio3\console\exercicio3.dproj"/>
+    </Target>
+    <Target Name="exercicio3:Clean">
+        <MSBuild Projects="exercicio3\console\exercicio3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="exercicio3:Make">
+        <MSBuild Projects="exercicio3\console\exercicio3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="exercicio3vcl">
+        <MSBuild Projects="exercicio3\vcl\exercicio3vcl.dproj"/>
+    </Target>
+    <Target Name="exercicio3vcl:Clean">
+        <MSBuild Projects="exercicio3\vcl\exercicio3vcl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="exercicio3vcl:Make">
+        <MSBuild Projects="exercicio3\vcl\exercicio3vcl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="exercicio4">
+        <MSBuild Projects="exercicio4\console\exercicio4.dproj"/>
+    </Target>
+    <Target Name="exercicio4:Clean">
+        <MSBuild Projects="exercicio4\console\exercicio4.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="exercicio4:Make">
+        <MSBuild Projects="exercicio4\console\exercicio4.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="exercicio4vcl">
+        <MSBuild Projects="exercicio4\vcl\exercicio4vcl.dproj"/>
+    </Target>
+    <Target Name="exercicio4vcl:Clean">
+        <MSBuild Projects="exercicio4\vcl\exercicio4vcl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="exercicio4vcl:Make">
+        <MSBuild Projects="exercicio4\vcl\exercicio4vcl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="exercicio5vcl">
+        <MSBuild Projects="exercicio5\vcl\exercicio5vcl.dproj"/>
+    </Target>
+    <Target Name="exercicio5vcl:Clean">
+        <MSBuild Projects="exercicio5\vcl\exercicio5vcl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="exercicio5vcl:Make">
+        <MSBuild Projects="exercicio5\vcl\exercicio5vcl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="exercicio5">
+        <MSBuild Projects="exercicio5\console\exercicio5.dproj"/>
+    </Target>
+    <Target Name="exercicio5:Clean">
+        <MSBuild Projects="exercicio5\console\exercicio5.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="exercicio5:Make">
+        <MSBuild Projects="exercicio5\console\exercicio5.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Exercicio1;Exercicio1VCL;exercicio2;exercicio2VCL;exercicio3;exercicio3vcl;exercicio4;exercicio4vcl;exercicio5vcl;exercicio5"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Exercicio1:Clean;Exercicio1VCL:Clean;exercicio2:Clean;exercicio2VCL:Clean;exercicio3:Clean;exercicio3vcl:Clean;exercicio4:Clean;exercicio4vcl:Clean;exercicio5vcl:Clean;exercicio5:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Exercicio1:Make;Exercicio1VCL:Make;exercicio2:Make;exercicio2VCL:Make;exercicio3:Make;exercicio3vcl:Make;exercicio4:Make;exercicio4vcl:Make;exercicio5vcl:Make;exercicio5:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

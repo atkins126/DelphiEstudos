@@ -1,0 +1,49 @@
+unit View.Loading;
+
+interface
+
+uses
+  Vcl.ComCtrls;
+type
+
+  TLoadingProgress = procedure ( aValuae : Integer ) of Object;
+
+  TLoading = class
+    private
+    FOnLoading: TLoadingProgress;
+    procedure SetOnLoading(const Value: TLoadingProgress);
+
+    public
+         procedure Preencher;
+         property OnLoading : TLoadingProgress read FOnLoading write SetOnLoading;
+
+  end;
+
+implementation
+
+uses
+  Winapi.Windows;
+
+{ TLoading }
+
+procedure TLoading.Preencher( aProgressBar : TProgressBar );
+var
+  I: Integer;
+begin
+  aProgressBar.Min := 1;
+  aProgressBar.Max := 100;
+  for I := 1 to 100 do
+  begin
+   Sleep(10);
+   aProgressBar.Position := I;
+  end;
+
+
+end;
+
+procedure TLoading.SetOnLoading(const Value: TLoadingProgress);
+begin
+  FOnLoading := Value;
+end;
+
+end.

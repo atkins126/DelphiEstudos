@@ -1,0 +1,51 @@
+unit Model.Connections.RestRequest;
+
+interface
+
+uses
+  Model.Connections.Interfaces;
+
+type
+  TModelConnectionsRestRequest = class(TInterfacedObject, iModelConnectionsInterface)
+    private
+      FReturn : String;
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iModelConnectionsInterface;
+      function Get ( aValue : String ) : iModelConnectionsInterface;
+      function Return : String;
+  end;
+
+implementation
+
+{ TModelConnectionsRestRequest }
+
+constructor TModelConnectionsRestRequest.Create;
+begin
+
+end;
+
+destructor TModelConnectionsRestRequest.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelConnectionsRestRequest.Get(
+  aValue: String): iModelConnectionsInterface;
+begin
+  Result := Self;
+end;
+
+class function TModelConnectionsRestRequest.New: iModelConnectionsInterface;
+begin
+  Result := Self.Create;
+end;
+
+function TModelConnectionsRestRequest.Return: String;
+begin
+  Result := FReturn;.
+end;
+
+end.

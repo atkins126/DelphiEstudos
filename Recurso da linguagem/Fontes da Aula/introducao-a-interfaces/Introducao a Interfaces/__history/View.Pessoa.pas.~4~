@@ -1,0 +1,32 @@
+unit View.Pessoa;
+
+interface
+
+uses
+  View.Pessoa.Interfaces;
+
+type
+  TPessoa = class(TInterfacedObject, iPessoa)
+    private
+      FNome : String;
+    public
+      function ValidarNome : Boolean;
+      function Nome ( aValue : String ) : TPessoa;
+  end;
+
+implementation
+
+{ TPessoa }
+
+function TPessoa.Nome(aValue: String): TPessoa;
+begin
+  Result := Self;
+  FNome := aValue;
+end;
+
+function TPessoa.ValidarNome: Boolean;
+begin
+  Result := (FNome <> '')
+end;
+
+end.

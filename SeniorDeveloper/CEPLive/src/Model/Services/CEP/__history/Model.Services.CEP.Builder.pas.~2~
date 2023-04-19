@@ -1,0 +1,37 @@
+unit Model.Services.CEP.Builder;
+
+interface
+
+uses
+    Model.Services.CEP.Interfaces;
+
+type
+  TModelServicesCEPBuilder = class(TInterfacedObject, iModelServicesCEPBuilder)
+    private
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iModelServicesCEPBuilder;
+  end;
+
+implementation
+
+{ TModelServicesCEPBuilder }
+
+constructor TModelServicesCEPBuilder.Create;
+begin
+
+end;
+
+destructor TModelServicesCEPBuilder.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelServicesCEPBuilder.New: iModelServicesCEPBuilder;
+begin
+  Result := Self.Create;
+end;
+
+end.

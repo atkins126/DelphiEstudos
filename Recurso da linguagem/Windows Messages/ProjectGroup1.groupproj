@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D25B69FA-81F3-4810-81C3-E3A9FCB23E89}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PWindowsMessagens.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ReceiverMessenger.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PWindowsMessagens">
+        <MSBuild Projects="PWindowsMessagens.dproj"/>
+    </Target>
+    <Target Name="PWindowsMessagens:Clean">
+        <MSBuild Projects="PWindowsMessagens.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PWindowsMessagens:Make">
+        <MSBuild Projects="PWindowsMessagens.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ReceiverMessenger">
+        <MSBuild Projects="ReceiverMessenger.dproj"/>
+    </Target>
+    <Target Name="ReceiverMessenger:Clean">
+        <MSBuild Projects="ReceiverMessenger.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ReceiverMessenger:Make">
+        <MSBuild Projects="ReceiverMessenger.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PWindowsMessagens;ReceiverMessenger"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PWindowsMessagens:Clean;ReceiverMessenger:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PWindowsMessagens:Make;ReceiverMessenger:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

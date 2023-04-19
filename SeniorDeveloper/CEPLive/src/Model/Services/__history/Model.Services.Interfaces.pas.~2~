@@ -1,0 +1,15 @@
+unit Model.Services.Interfaces;
+
+interface
+
+type
+  iModelServicesCEP = interface
+    ['{D5B97373-55B5-4C9E-BD9D-40A4DCD18DBA}']
+    function Code ( aValue : String ) : iModelServicesCEP;
+    function Execute : iModelServicesCEP;
+    function Return : String;
+  end;
+
+implementation
+
+end.

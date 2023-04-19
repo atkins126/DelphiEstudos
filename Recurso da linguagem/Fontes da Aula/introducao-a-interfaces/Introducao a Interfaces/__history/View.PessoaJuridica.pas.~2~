@@ -1,0 +1,34 @@
+unit View.PessoaJuridica;
+
+interface
+
+type
+  TPessoaJuridica = class(TInterfacedObject, iPessoa)
+    private
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iPessoa;
+  end;
+
+implementation
+
+{ TPessoaJuridica }
+
+constructor TPessoaJuridica.Create;
+begin
+
+end;
+
+destructor TPessoaJuridica.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TPessoaJuridica.New: iPessoa;
+begin
+  Result := Self.Create;
+end;
+
+end.

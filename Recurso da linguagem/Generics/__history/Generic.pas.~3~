@@ -1,0 +1,71 @@
+unit Generic;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Generic.Classe.Empresa;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+uses
+  Generic.Classe.Pessoa;
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  vPessoa : TPessoa;
+begin
+  vPessoa := TPessoa.Create;
+  try
+    vPessoa
+      .Nome('Eric Galdino')
+        .Params
+          .Telefone('75 9 8891 0494')
+          .Endereco('Rua A')
+          .Cep('44440520')
+          .Numero(23);
+
+  finally
+    vPessoa.Free
+  end;
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+var
+  vEmpresa : TEmpresa;
+
+begin
+  vEmpresa := TEmpresa.Create;
+  try
+    vEmpresa
+      .RazaoSocial('Gti Sistemas')
+        .Params
+         .Telefone('75  8891 0494')
+         .Endereco('Rua A')
+         .Cep('44440520')
+         .Numero(23);
+  finally
+
+  end;
+
+
+end;
+
+end.
