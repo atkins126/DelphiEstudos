@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/04/20 14:57:53.000.062,=C:\Users\Eric Dev\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/20 14:59:55.000.255,C:\Users\Eric Dev\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\Estudos\DelphiEstudos\Recurso da linguagem\System Messaging\SystemMessaging.pas</Transaction>
+    <Transaction>2023/04/20 14:59:55.000.255,C:\Users\Eric Dev\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\Estudos\DelphiEstudos\Recurso da linguagem\System Messaging\SystemMessaging.dfm</Transaction>
+    <Transaction>2023/04/20 15:00:10.000.214,C:\Users\Eric Dev\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\Estudos\DelphiEstudos\Recurso da linguagem\System Messaging\SystemMessagingAula.dproj</Transaction>
+    <Transaction>2023/04/20 17:53:53.457,=D:\Estudos\DelphiEstudos\Recurso da linguagem\System Messaging\Unit2.pas</Transaction>
+    <Transaction>2023/04/20 17:54:26.884,D:\Estudos\DelphiEstudos\Recurso da linguagem\System Messaging\FSystemMessaging2.pas=D:\Estudos\DelphiEstudos\Recurso da linguagem\System Messaging\Unit2.pas</Transaction>
+    <Transaction>2023/04/20 17:54:26.884,D:\Estudos\DelphiEstudos\Recurso da linguagem\System Messaging\FSystemMessaging2.dfm=D:\Estudos\DelphiEstudos\Recurso da linguagem\System Messaging\Unit2.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

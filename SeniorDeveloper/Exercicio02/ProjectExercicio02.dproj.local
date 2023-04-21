@@ -3,8 +3,8 @@
 	<Transactions>
     <Transaction>2021/05/10 17:14:06.000.699,=C:\Users\EricGaldino\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2021/05/20 19:14:41.000.502,=C:\Users\EricGaldino\Documents\Embarcadero\Studio\Projects\Unit7.pas</Transaction>
-    <Transaction>2021/05/20 19:15:22.000.366,C:\Users\EricGaldino\Documents\Embarcadero\Studio\Projects\Unit7.dfm=E:\Projetos\SeniorDeveloper\Exercicio02\Exercicio02.dfm</Transaction>
-    <Transaction>2021/05/20 19:15:22.000.366,C:\Users\EricGaldino\Documents\Embarcadero\Studio\Projects\Unit7.pas=E:\Projetos\SeniorDeveloper\Exercicio02\Exercicio02.pas</Transaction>
-    <Transaction>2021/05/20 19:15:26.000.168,C:\Users\EricGaldino\Documents\Embarcadero\Studio\Projects\Project1.dproj=E:\Projetos\SeniorDeveloper\Exercicio02\ProjectExercicio02.dproj</Transaction>
+    <Transaction>2021/05/20 19:15:22.000.366,E:\Projetos\SeniorDeveloper\Exercicio02\Exercicio02.dfm=C:\Users\EricGaldino\Documents\Embarcadero\Studio\Projects\Unit7.dfm</Transaction>
+    <Transaction>2021/05/20 19:15:22.000.366,E:\Projetos\SeniorDeveloper\Exercicio02\Exercicio02.pas=C:\Users\EricGaldino\Documents\Embarcadero\Studio\Projects\Unit7.pas</Transaction>
+    <Transaction>2021/05/20 19:15:26.000.168,E:\Projetos\SeniorDeveloper\Exercicio02\ProjectExercicio02.dproj=C:\Users\EricGaldino\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>
