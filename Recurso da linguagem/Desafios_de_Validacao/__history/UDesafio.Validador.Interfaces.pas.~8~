@@ -17,8 +17,6 @@ type
   iValidationRules = interface
     ['{F6122293-2087-4FEB-B365-A6DFCFB447BD}']
     function Paranms: iValidationRulesParams;
-    //Injeção de Dependencia
-    function &End : iValidation;
     end;
   iValidationRulesParams = interface
     ['{F976DF05-55C9-4D7E-B7EA-CDD3D681CA77}']

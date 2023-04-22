@@ -1,0 +1,20 @@
+unit UDesafio.Validador.NotNull;
+
+interface
+
+uses
+  UDesafio.Validador.Interfaces;
+type
+  TValidationRulesNotNull = class (TInterfacedObject, iValidationRules)
+  private
+  public
+  constructor Create;
+  destructor Destroy; override;
+  class New : iValidationRulesParams;
+  function Params : iValidationRulesParams;
+
+  end;
+
+implementation
+
+end.

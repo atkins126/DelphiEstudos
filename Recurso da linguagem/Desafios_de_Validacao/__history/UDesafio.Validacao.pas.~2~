@@ -1,0 +1,9 @@
+unit UDesafio.Validacao;
+
+interface
+  type
+   TValidation = class (TI
+
+implementation
+
+end.

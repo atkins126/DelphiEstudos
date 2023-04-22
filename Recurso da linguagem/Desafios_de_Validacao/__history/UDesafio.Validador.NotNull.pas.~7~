@@ -1,0 +1,48 @@
+unit UDesafio.Validador.NotNull;
+
+interface
+
+uses
+  UDesafio.Validador.Interfaces;
+  type
+    TValidationRulesNotNull = class (TInterfacedObject, iValidationRules)
+      private
+      FParams : iValidationRulesParams;
+      public
+        constructor Create;
+        destructor Destroy; override;
+        class function New : iValidationRules;
+        function Params : iValidationRulesParams;
+      end;
+
+implementation
+
+uses
+  UDesafio.Validador.Parametros;
+
+{ TValidationRulesNotNull }
+
+constructor TValidationRulesNotNull.Create;
+begin
+
+end;
+
+destructor TValidationRulesNotNull.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TValidationRulesNotNull.New: iValidationRules;
+begin
+  Result := Self.Create;
+end;
+
+function TValidationRulesNotNull.Params: iValidationRulesParams;
+begin
+  if not Assigned(FParams) then
+      FParams := TValidationRulesParams.New(Self);
+    Result := Self;
+end;
+
+end.

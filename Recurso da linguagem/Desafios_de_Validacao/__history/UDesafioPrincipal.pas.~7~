@@ -14,8 +14,8 @@ type
     Label2: TLabel;
     procedure Edit1Exit(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
-    procedure Edit2Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Edit2Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,10 +26,6 @@ var
   Form1: TForm1;
 
 implementation
-
-uses
-  UDesafio.Validacao;
-
 
 {$R *.dfm}
 
@@ -62,34 +58,11 @@ begin
   begin
     Edit2.Color := ClRed;
     Label2.Visible := False;
-  end;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  TValidation.New
-      .NotNull
-        .Paranms
-          .Component(Edit1)
-          .ColorDanger(clRed)
-          .DisplayLabel(Label1)
-          .DisplayMsg('Edit1 Não pode ser Vazio')
-        .&End
-      {.MinLengh
-        .Component(Edit1)
-        .ColorDanger(clRed)
-        .DisplayComponent(Label1)
-        .DisplayMsgError('Edit1 deve ter mais de 3 caracteres')
-        .MinLenghValue(3)
-      .&End
-      .MaxLengh
-        .Component(Edit1)
-        .ColorDanger(clRed)
-        .DisplayComponent(Label1)
-        .DisplayMsgError('Edit1 não pode ter mais de 15 caracteres')
-        .MaxLenghValue(15)
-      .&End;
-      }
+
 end;
 
 end.

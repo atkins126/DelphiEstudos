@@ -7,18 +7,14 @@ uses
 
 type
   iValidationRulesParams = interface;
-   iValidationRules = interface;
 
   iValidation = interface
     ['{0CF3F592-6FFA-4B53-B78C-6CD4AE7647A8}']
-    function NotNull : iValidationRules;
   end;
 
   iValidationRules = interface
     ['{F6122293-2087-4FEB-B365-A6DFCFB447BD}']
     function Paranms: iValidationRulesParams;
-    //Injeção de Dependencia
-    function &End : iValidation;
     end;
   iValidationRulesParams = interface
     ['{F976DF05-55C9-4D7E-B7EA-CDD3D681CA77}']

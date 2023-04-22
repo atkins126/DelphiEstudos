@@ -1,27 +1,16 @@
-unit UDesafio.Validador.Interfaces;
+unit UDesafio.Validador.Parametros;
 
 interface
 
 uses
-  System.Classes,  Vcl.Graphics;
-
+  UDesafio.Validador.Interfaces, System.Classes, Vcl.Graphics;
 type
-  iValidationRulesParams = interface;
-   iValidationRules = interface;
-
-  iValidation = interface
-    ['{0CF3F592-6FFA-4B53-B78C-6CD4AE7647A8}']
-    function NotNull : iValidationRules;
-  end;
-
-  iValidationRules = interface
-    ['{F6122293-2087-4FEB-B365-A6DFCFB447BD}']
-    function Paranms: iValidationRulesParams;
-    //Injeção de Dependencia
-    function &End : iValidation;
-    end;
-  iValidationRulesParams = interface
-    ['{F976DF05-55C9-4D7E-B7EA-CDD3D681CA77}']
+  TValidationRulesParams = class (TInterfacedObject, iValidationRulesParams)
+  private
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New : iValidationRulesParams;
     function Component (aValue : TComponent): iValidationRulesParams; overload;
     function Component : TComponent; overload;
     function ColorDanger (aValue : TColor): iValidationRulesParams; overload;
@@ -37,8 +26,27 @@ type
     function MaxLength (aValue : Integer ): iValidationRulesParams; overload;
     function MaxLength : Integer; overload;
     function &End : iValidationRulesParams;
-    end;
+
+  end;
 
 implementation
+
+{ TValidationRulesParams }
+
+constructor TValidationRulesParams.Create;
+begin
+
+end;
+
+destructor TValidationRulesParams.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TValidationRulesParams.New: iValidationRulesParams;
+begin
+  Result := Self.Create;
+end;
 
 end.

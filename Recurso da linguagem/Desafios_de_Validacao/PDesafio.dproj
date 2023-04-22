@@ -105,8 +105,10 @@
             <Form>Form1</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="UDesafio.Parametros.pas"/>
+        <DCCReference Include="UDesafio.Validador.Parametros.pas"/>
         <DCCReference Include="UDesafio.Validador.Interfaces.pas"/>
+        <DCCReference Include="UDesafio.Validador.NotNull.pas"/>
+        <DCCReference Include="UDesafio.Validacao.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
