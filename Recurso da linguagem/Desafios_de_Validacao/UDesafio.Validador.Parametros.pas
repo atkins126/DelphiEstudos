@@ -5,38 +5,38 @@ interface
 uses
   UDesafio.Validador.Interfaces, System.Classes, Vcl.Graphics;
 type
-  TValidationRulesParams = class (TInterfacedObject, iValidationRulesParams)
-  private
-  [weak] //Para não ter um vazamento de memoria! (No modulo de injeção de dependecia explicarar melhor)
-  FParent : iValidationRulesParams;
-  FComponent : TComponent;
-  FColorDanger : TColor;
-  FColorDefault : TColor;
-  FDisplaylabel : TComponent;
-  FDisplayMsg : String;
-  FMinLength : Integer;
-  FMaxLength : Integer;
-  public
-    constructor Create (Parent : iValidationRules);
-    destructor Destroy; override;
-    class function New (Parent : iValidationRules): iValidationRulesParams;
-    function Component (aValue : TComponent): iValidationRulesParams; overload;
-    function Component : TComponent; overload;
-    function ColorDanger (aValue : TColor): iValidationRulesParams; overload;
-    function ColorDanger : TColor; overload;
-    function ColorDefault (avalue : TColor): iValidationRulesParams; overload;
-    function ColorDefault : TColor; overload;
-    function DisplayLabel (aValue : TComponent): iValidationRulesParams; overload;
-    function DisplayLabel :TComponent; overload;
-    function DisplayMsg (aValue : String): iValidationRulesParams; overload;
-    function DisplayMsg : String; overload;
-    function MinLength (aValue : Integer) : iValidationRulesParams; overload;
-    function MinLength : Integer; overload;
-    function MaxLength (aValue : Integer ): iValidationRulesParams; overload;
-    function MaxLength : Integer; overload;
-    function &End : iValidationRulesParams;
+ TValidationRulesParams = class (TInterfacedObject, iValidationRulesParams)
+    private
+    [weak] //Para não ter um vazamento de memoria! (No modulo de injeção de dependecia explicarar melhor)
+    FParent : iValidationRules;
+    FComponent : TComponent;
+    FColorDanger : TColor;
+    FColorDefault : TColor;
+    FDisplaylabel : TComponent;
+    FDisplayMsg : String;
+    FMinLength : Integer;
+    FMaxLength : Integer;
+    public
+      constructor Create (Parent : iValidationRules);
+      destructor Destroy; override;
+      class function New (Parent : iValidationRules): iValidationRulesParams;
+      function Component (aValue : TComponent): iValidationRulesParams; overload;
+      function Component : TComponent; overload;
+      function ColorDanger (aValue : TColor): iValidationRulesParams; overload;
+      function ColorDanger : TColor; overload;
+      function ColorDefault (avalue : TColor): iValidationRulesParams; overload;
+      function ColorDefault : TColor; overload;
+      function DisplayLabel (aValue : TComponent): iValidationRulesParams; overload;
+      function DisplayLabel :TComponent; overload;
+      function DisplayMsg (aValue : String): iValidationRulesParams; overload;
+      function DisplayMsg : String; overload;
+      function MinLength (aValue : Integer) : iValidationRulesParams; overload;
+      function MinLength : Integer; overload;
+      function MaxLength (aValue : Integer ): iValidationRulesParams; overload;
+      function MaxLength : Integer; overload;
+      function &End : iValidationRules;
 
-  end;
+    end;
 
 implementation
 
@@ -79,7 +79,7 @@ begin
   FComponent := FComponent;
 end;
 
-function TValidationRulesParams.&End: iValidationRulesParams;
+function TValidationRulesParams.&End: iValidationRules;
 begin
   Result := FParent;
 end;

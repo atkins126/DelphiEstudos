@@ -1,0 +1,148 @@
+unit UDesafio.Validador.Parametros;
+
+interface
+
+uses
+  UDesafio.Validador.Interfaces, System.Classes, Vcl.Graphics;
+type
+  TValidationRulesParams = class (TInterfacedObject, iValidationRulesParams)
+  private
+  [weak] //Para não ter um vazamento de memoria! (No modulo de injeção de dependecia explicarar melhor)
+  FParent : iValidationRules;
+  FComponent : TComponent;
+  FColorDanger : TColor;
+  FColorDefault : TColor;
+  FDisplaylabel : TComponent;
+  FDisplayMsg : String;
+  FMinLength : Integer;
+  FMaxLength : Integer;
+  public
+    constructor Create (Parent : iValidationRules);
+    destructor Destroy; override;
+    class function New (Parent : iValidationRules): iValidationRulesParams;
+    function Component (aValue : TComponent): iValidationRulesParams; overload;
+    function Component : TComponent; overload;
+    function ColorDanger (aValue : TColor): iValidationRulesParams; overload;
+    function ColorDanger : TColor; overload;
+    function ColorDefault (avalue : TColor): iValidationRulesParams; overload;
+    function ColorDefault : TColor; overload;
+    function DisplayLabel (aValue : TComponent): iValidationRulesParams; overload;
+    function DisplayLabel :TComponent; overload;
+    function DisplayMsg (aValue : String): iValidationRulesParams; overload;
+    function DisplayMsg : String; overload;
+    function MinLength (aValue : Integer) : iValidationRulesParams; overload;
+    function MinLength : Integer; overload;
+    function MaxLength (aValue : Integer ): iValidationRulesParams; overload;
+    function MaxLength : Integer; overload;
+    function &End : iValidationRulesParams;
+
+  end;
+
+implementation
+
+{ TValidationRulesParams }
+
+function TValidationRulesParams.ColorDanger: TColor;
+begin
+  Result := FColorDanger;
+end;
+
+function TValidationRulesParams.ColorDanger(
+  aValue: TColor): iValidationRulesParams;
+begin
+  Result := Self;
+  FColorDanger := aValue;
+
+end;
+
+function TValidationRulesParams.ColorDefault(
+  avalue: TColor): iValidationRulesParams;
+begin
+  Result := Self;
+  FColorDefault := aValue;
+end;
+
+function TValidationRulesParams.ColorDefault: TColor;
+begin
+  Result := FColorDefault;
+end;
+
+function TValidationRulesParams.Component: TComponent;
+begin
+  Result := FComponent;
+end;
+
+function TValidationRulesParams.Component(
+  aValue: TComponent): iValidationRulesParams;
+begin
+  Result := Self;
+  FComponent := FComponent;
+end;
+
+
+
+constructor TValidationRulesParams.Create(Parent : iValidationRules);
+begin
+  FParent := Parent;
+end;
+
+destructor TValidationRulesParams.Destroy;
+begin
+
+  inherited;
+end;
+
+function TValidationRulesParams.DisplayLabel: TComponent;
+begin
+  Result := FDisplaylabel;
+end;
+
+function TValidationRulesParams.DisplayLabel(
+  aValue: TComponent): iValidationRulesParams;
+begin
+  Result := Self;
+  FDisplaylabel := aValue;
+end;
+
+function TValidationRulesParams.DisplayMsg(
+  aValue: String): iValidationRulesParams;
+begin
+  Result := Self;
+  FDisplayMsg := aValue;
+end;
+
+function TValidationRulesParams.DisplayMsg: String;
+begin
+  Result := FDisplayMsg;
+end;
+
+function TValidationRulesParams.MaxLength: Integer;
+begin
+  Result := FMaxLength;
+end;
+
+function TValidationRulesParams.MaxLength(
+  aValue: Integer): iValidationRulesParams;
+begin
+  Result := Self;
+  FMaxLength := aValue;
+end;
+
+function TValidationRulesParams.MinLength(
+  aValue: Integer): iValidationRulesParams;
+begin
+  Result := Self;
+  FMinLength := aValue;
+end;
+
+function TValidationRulesParams.MinLength: Integer;
+begin
+  Result := FMinLength;
+end;
+
+class function TValidationRulesParams.New(Parent : iValidationRules): iValidationRulesParams;
+begin
+  Result := Self.Create(Parent);
+end;
+
+end.

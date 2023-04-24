@@ -69,7 +69,7 @@ procedure TForm1.FormCreate(Sender: TObject);
 begin
   TValidation.New
       .NotNull
-        .Paranms
+        .Params
           .Component(Edit1)
           .ColorDanger(clRed)
           .DisplayLabel(Label1)

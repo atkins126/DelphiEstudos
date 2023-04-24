@@ -10,7 +10,7 @@ uses
    FNotNull : iValidationRules;
    public
       constructor Create;
-      destructor Destroy;
+      destructor Destroy; override;
       class function New : ivalidation;
       function NotNull : iValidationRules;
 

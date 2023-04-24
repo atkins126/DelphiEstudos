@@ -7,7 +7,7 @@ uses
 
 type
   iValidationRulesParams = interface;
-   iValidationRules = interface;
+  iValidationRules = interface;
 
   iValidation = interface
     ['{0CF3F592-6FFA-4B53-B78C-6CD4AE7647A8}']
@@ -16,7 +16,7 @@ type
 
   iValidationRules = interface
     ['{F6122293-2087-4FEB-B365-A6DFCFB447BD}']
-    function Paranms: iValidationRulesParams;
+    function Params: iValidationRulesParams;
     //Injeção de Dependencia
     function &End : iValidation;
     end;
@@ -36,7 +36,8 @@ type
     function MinLength : Integer; overload;
     function MaxLength (aValue : Integer ): iValidationRulesParams; overload;
     function MaxLength : Integer; overload;
-    function &End : iValidationRulesParams;
+//  function &End : iValidationRulesParams;
+    function &End : iValidationRules;
     end;
 
 implementation

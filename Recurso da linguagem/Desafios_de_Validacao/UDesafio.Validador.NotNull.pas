@@ -7,6 +7,7 @@ uses
   type
     TValidationRulesNotNull = class (TInterfacedObject, iValidationRules)
       private
+      [weak]
       FParent : iValidation;
       FParams : iValidationRulesParams;
       public
@@ -15,7 +16,7 @@ uses
         class function New (Parent : iValidation) : iValidationRules;
         function Params : iValidationRulesParams;
         //Injeção de Dependencia
-        function &End : iValidationRules;
+        function &End : iValidation;
       end;
 
 implementation
@@ -23,14 +24,16 @@ implementation
 uses
   UDesafio.Validador.Parametros;
 
+
+
 { TValidationRulesNotNull }
 
-function TValidationRulesNotNull.&End: iValidationRules;
+function TValidationRulesNotNull.&End: iValidation;
 begin
   Result := FParent;
 end;
 
-constructor TValidationRulesNotNull.Create;
+constructor TValidationRulesNotNull.Create(Parent : iValidation);
 begin
  FParent := Parent;
 end;
@@ -41,16 +44,16 @@ begin
   inherited;
 end;
 
-class function TValidationRulesNotNull.New (Parent : iValidation): iValidationRules;
+class function TValidationRulesNotNull.New (Parent : iValidation) : iValidationRules;
 begin
-  Result := Self.Create (Parent);
+  Result := Self.Create(Parent);
 end;
 
 function TValidationRulesNotNull.Params: iValidationRulesParams;
 begin
   if not Assigned(FParams) then
       FParams := TValidationRulesParams.New(Self);
-    Result := Self;
+    Result := FParams;
 end;
 
 end.
